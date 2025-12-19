@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Applicationfor Techincal Internship</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Basic page styling >> disabled for CSS assignment
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f6f7fb; color: #101; }
+    header, footer { background: #000119; color: #cccffe; padding: 18px; }
+    nav a { color: #cccffe; margin-right: 14px; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 18px; }
+    .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: start; }
+    .card { background: #cccffe; border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px; }
+    .muted { color: #6b7280; }
+    label { display: block; margin: 10px 0 6px; font-weight: 600; }
+    input, select, textarea { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 10px; }
+    fieldset { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; margin-top: 12px; }
+    legend { font-weight: 700; padding: 0 6px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .inline { display: flex; gap: 12px; flex-wrap: wrap; }
+    .inline label { display: inline-flex; align-items: center; gap: 8px; margin: 6px 0; font-weight: 500; }
+    .inline input { width: auto; }
+    .btn { background: #2563eb; color: #cccffe; border: none; cursor: pointer; padding: 10px 14px; border-radius: 10px; }
+    .btn:hover { filter: brightness(0.95); }
+    aside .small { font-size: 14px; }
+    blockquote { margin: 0; padding: 12px 14px; border-left: 5px solid #2563eb; background: #eef2ff; border-radius: 12px; }
+    embed { width: 100%; height: 240px; border: 1px solid #e5e7eb; border-radius: 12px; }
+    footer p { margin: 6px 0 0; }
+  </style> -->
+</head>
+
+<body>
+  <!-- HEADER + NAVIGATION -->
+  <header>
+    <div class="wrap">
+      <h1 id="main-title" class="title" style="margin:0;">Company Name</h1> <!-- placeholder name, cannot think of a compnay -->
+      <p class="muted" style="margin:6px 0 0;">
+        Fictional company. Role: Technical Intern
+      </p>
+
+      <nav class="menu" aria-label="Primary navigation">
+        <a href="#about" title="Jump to role overview">About the Role</a>
+        <a href="#apply" title="Jump to application form">Apply</a>
+        <a href="#resources" title="Jump to applicant resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about" class="grid">
+      <article class="card">
+        <!-- ARTICLE (testing) -->
+        <h2>About the Role</h2>
+        <p>
+          Company is looking for a <strong>Techincal Assistant</strong> to help keep our company's website good.
+        </p>
+
+        <!-- BLOCKQUOTE -->
+        <blockquote>
+          “Journey of a thousand miles begins with one step.”
+        </blockquote>
+
+        <p class="muted" style="margin-top:10px;">
+          This page is meant for learning advanced HTML.
+        </p>
+      </article>
+
+      <!-- ASIDE -->
+      <aside class="card">
+        <h3>Quick Notes</h3>
+        <p class="small muted">
+          Please fill out all required fields. Use realistic values to test validation rules such as
+          <em>pattern</em>, <em>minlength</em>, and <em>maxlength</em>.
+        </p>
+        <ul class="small main-list">
+          <li>Preferred start date is flexible</li>
+          <li>Remote-friendly options available</li>
+          <li>Portfolio link helps</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="apply" class="card form-section" style="margin-top:16px;">
+      <h2>Job Application Form</h2>
+      <p class="muted">All fields marked required must be completed before submission.</p>
+	  <p class="green bold">TIP: Double check your information before submission.</p>
+
+      <!-- FORM -->
+      <form action="/submit" method="post" autocomplete="on" aria-label="Job application form">
+        <!-- TEXT INPUTS -->
+        <!-- Full Name -->
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="e.g., Quyet Pham"
+          required
+          aria-required="true"
+          minlength="2"
+          maxlength="40"
+          pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,40}"
+          title="Only valid characters allowed (2–40 characters)"
+        />
+
+        <!-- Email, using text type -->
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="e.g., quyet@email.co"
+          required
+          minlength="6"
+          maxlength="60"
+          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+          title="Enter a valid email address (example: name@domain.com)"
+        />
+
+        <!-- PASSWORD FIELD -->
+        <label for="password">Create your password</label>
+        <input
+          type="password" 
+		  id="password" name="password" 
+		  placeholder="Create your password" required
+          minlength="8"
+          maxlength="30"
+          pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*]{8,30}"
+          title="8–30 characters, include at least 1 letter and 1 number"
+        />
+
+        <!-- NUMBER INPUT -->
+        <div class="row">
+          <div>
+            <label for="experience">Years of Experience</label>
+            <input
+              type="number"
+              id="experience"
+              name="experience"
+              min="0"
+              max="30"
+              placeholder="0"
+              required
+            />
+          </div>
+
+          <!-- RANGE SLIDER -->
+          <div>
+            <label for="salary">Expected Salary (EUR/month)</label>
+            <input
+              type="range"
+              id="salary"
+              name="salary"
+              min="1000"
+              max="10000"
+              step="250"
+            />
+          </div>
+        </div>
+
+        <!-- DROPDOWN MENU -->
+        <label for="position">Select Position</label>
+        <select id="position" name="position" required>
+          <option value="" selected disabled>Choose a position…</option>
+          <option value="technical-intern">Technical Intern</option>
+          <option value="technical-assistant">Technical Assistant</option>
+          <option value="qa-tester">QA Tester</option>
+        </select>
+
+        <!-- DATALIST -->
+        <label for="city">Preferred Work Location</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          list="citySuggestions"
+          placeholder="Start typing a city…"
+        />
+        <datalist id="citySuggestions">
+          <option value="Luxembourg City"></option>
+          <option value="Metz"></option>
+          <option value="Helsinki"></option>
+          <option value="Hanoi"></option>
+          <option value="Remote"></option>
+        </datalist>
+
+        <!-- CHECKBOXES -->
+        <fieldset>
+          <legend>Work Preferences (Checkboxes)</legend>
+          <!-- comment: checkboxes allow multiple selections -->
+          <div class="inline">
+            <label><input type="checkbox" name="preferences" value="remote" />Remote work</label>
+            <label><input type="checkbox" name="preferences" value="hybrid" />Hybrid</label>
+            <label><input type="checkbox" name="preferences" value="on-site" />On-site</label>
+            <label><input type="checkbox" name="preferences" value="flex-hours" />Flexible hours</label>
+          </div>
+        </fieldset>
+
+        <!-- RADIO BUTTONS -->
+        <fieldset>
+          <legend>Job Type (Radio Buttons)</legend>
+          <!-- comment: radio buttons allow one choice per group (same name) -->
+          <div class="inline">
+            <label><input type="radio" name="jobType" value="full-time" required />Full-time</label>
+            <label><input type="radio" name="jobType" value="part-time" />Part-time</label>
+            <label><input type="radio" name="jobType" value="internship" />Thesis work</label>
+          </div>
+        </fieldset>
+
+        <!-- TEXTAREA -->
+        <label for="coverLetter">Cover Letter</label>
+        <textarea
+          id="coverLetter"
+          name="coverLetter"
+          rows="6"
+          cols="30"
+          placeholder="Tell us why you're a great fit for this company…"
+          required
+        ></textarea>
+
+        <!-- DISABLED & READ-ONLY -->
+        <div class="row">
+          <div>
+            <label for="ref">Referral (Disabled)</label>
+            <input
+              type="text"
+              id="ref"
+              name="ref"
+              value="INVITE-ONLY"
+              disabled
+              title="Disabled field example"
+            />
+          </div>
+          <div>
+            <label for="employer">Employer (Read-only)</label>
+            <input
+              type="text"
+              id="employer"
+              name="employer"
+              value="The Company"
+              readonly
+              title="Read-only field example"
+            />
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON, sends the form data to the action URL -->
+        <input class="btn" type="submit" value="Send" style="margin-top:12px;" />
+      </form>
+    </section>
+
+    <section id="resources" class="grid" style="margin-top:16px;">
+      <article class="card">
+        <h2>Applicant Resources</h2>
+        <p>
+          Here’s a simple embedded document preview (dummy pdf file)
+        </p>
+
+        <!-- EMBED stuff-->
+        <embed
+          src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+          type="application/pdf"
+        />
+		<img src="winter-helsinki.jpg" alt="Winter image">
+      </article>
+
+      <aside class="card">
+        <h3>Navigation</h3>
+        <p class="muted small">Use these links to jump around the page:</p>
+        <nav aria-label="Section navigation">
+          <a href="#about" title="Go to About the Role" style="display:block; margin:8px 0;">About the Role</a>
+          <a href="#apply" title="Go to the Form" style="display:block; margin:8px 0;">Application Form</a>
+          <a href="#resources" title="Go to Resources" style="display:block; margin:8px 0;">Resources</a>
+        </nav>
+      </aside>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <p class="muted";>2025 Company. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

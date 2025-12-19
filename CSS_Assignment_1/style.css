@@ -1,0 +1,171 @@
+/* reset to default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* type selectors: h1, form, p */
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 34px;
+  color: #ffffff;
+  background-color: #000119;
+  text-align: center;
+  padding: 14px;
+}
+
+/* chaining selector: h1.title */
+h1.title {
+  letter-spacing: 1px;
+}
+
+/* ID selector: #main-title */
+#main-title {
+  border-bottom: 3px solid #2563eb;
+}
+
+/* multiple selectors: h1, h2, .menu {} */
+h1, h2, .menu {
+  font-family: Arial, sans-serif;
+}
+
+/* class selector: .form-section */
+.form-section {
+  background-image: url("https://www.w3schools.com/css/img_lights.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+/* multiple class selector: .green.bold */
+.green.bold {
+  color: green;
+  font-weight: bold;
+}
+
+/* type[attribute*=value] */
+input[type*="text"] {
+  border: 2px solid #d1d5db;
+}
+
+/* img[src*='winter'] */
+img[src*="winter"] {
+  border: 2px solid #2563eb;
+  border-radius: 16px;
+  opacity: 0.9; /* opacity */
+}
+
+/* Descendant combinators */
+/* .form label targetting .form-section area */
+.form-section label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* .main-list li */
+.main-list li {
+  margin-left: 18px;
+}
+
+/* type selector: form */
+form {
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px; /* border-radius */
+}
+
+/* type selector: p */
+p {
+  font-size: 16px;
+  color: #101;
+  opacity: 0.95;
+}
+
+/* visual rules + !important */
+
+.muted {
+  color: #6b7280 !important;
+}
+
+
+.card {
+  margin: 6px 11px 4px 9px;          /* margin shorthand */
+  padding: 6px 10px 5px 12px;         /* padindg shorthand */
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+/* auto centering: margin: 0 auto; */
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+/* width/height + min/max + overflow */
+embed {
+  width: 100%;
+  height: 240px;
+  min-width: 240px;
+  max-width: 980px;
+  min-height: 180px;
+  max-height: 300px;
+  overflow: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+/* individual margin andpadding properties */
+footer {
+  margin-top: 18px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+
+  padding-top: 14px;
+  padding-right: 14px;
+  padding-bottom: 14px;
+  padding-left: 14px; 
+
+  background-color: #000119;
+  color: #cccffe;
+  text-align: center;
+}
+
+/* visibility hidden */
+.hide-me {
+  visibility: hidden;
+}
+
+/* pseudo-classes: hover, focus, disabled, visited, active */
+
+/* link pseudo-classes */
+nav a:visited {
+  opacity: 0.75;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:active {
+  opacity: 0.6;
+}
+
+/* form pseudo-classes */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
