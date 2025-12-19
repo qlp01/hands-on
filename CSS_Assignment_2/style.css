@@ -1,0 +1,165 @@
+/* reset */
+* {box-sizing: border-box;}
+
+/* typography: font-family with fallback, font-weight keyword+numeric, italic, uppercase, spacing, line-height, align */
+body {
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 300; 
+  line-height: 1.5; 
+  word-spacing: 2px; 
+  letter-spacing: 0.3px;
+  background-color: hsl(210, 40%, 96%); 
+  margin: 0;
+}
+
+h1, h2 {
+  text-transform: uppercase; 
+  text-align: center;
+}
+
+.sub {
+  font-style: italic;
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* position: fixed, sticky, relative, absolute, static, top/bottom/left/right, z-index */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+  z-index: 10;
+  padding: 10px;
+  background-color: #000119;
+  color: #cccffe;
+}
+
+/* sticky nav */
+.nav {
+  position: sticky;
+  top: 70px;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.85); /* rgba opacity */
+  padding: 10px;
+  text-align: center;
+}
+
+/* display inline links */
+.nav a {
+  display: inline;
+  color: blue;
+  margin: 0 10px;
+}
+
+.nav a:visited { color: #7c3aed; }
+.nav a:hover { color: rgb(255, 0, 0); }
+
+/* banner uses relative; badge uses absolute */
+.banner {
+  position: relative; /* relative */
+  margin-top: 120px;
+  padding: 16px;
+  background-color: hsla(120, 60%, 70%, 0.35); /* hsla opacity */
+  border-bottom: 2px solid #A52A2A; /* hex color */
+}
+
+/* absolute badge inside banner */
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;  /* font-weight */
+}
+
+/* Gallery layotu: display block / inline-block, float & clear */
+.section {
+  display: block;
+  padding: 18px;
+}
+
+.gallery {
+
+}
+
+/* inline-block */
+.card {
+  display: inline-block;
+  width: 280px;
+  margin: 10px;
+  background-color: #fff;
+  border: 1px solid rgb(200, 200, 200);
+  vertical-align: top;
+  position: static;
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+/* float */
+.float-note {
+  float: right;
+  width: 200px;
+  padding: 8px;
+  margin: 6px;
+  background-color: transparent;
+  border: 1px dashed #111;
+}
+
+/* clear */
+.clear-me {
+  clear: both;
+}
+
+.card-abs {
+  position: relative;           /* relative container for absolute corner */
+}
+
+.corner {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 2px 6px;
+  z-index: 2;
+}
+
+.card-sticky {
+  position: relative;
+}
+
+.card-inline {
+  display: inline;
+}
+
+figcaption {
+  padding: 8px;
+  color: #111;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.art-title {
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.price {
+  color: red;
+}
+
+.footer {
+  position: static;
+  padding: 14px;
+  background-color: #000119;
+  color: #cccffe;
+  text-align: center;
+}
