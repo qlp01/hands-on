@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quyet Pham - Portfolio built with Bootstrap 5</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+  <!-- Navbar: responsive + collapse -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="index.html">Quyet Pham</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+              aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <!-- another HTML file -->
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resumé</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero -->
+  <header class="bg-light border-bottom">
+    <div class="container-fluid pt-5">
+      <div class="container py-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-md-8">
+            <div class="d-flex gap-2 flex-wrap mb-2">
+              <span class="badge text-bg-secondary">Bootstrap 5</span>
+              <span class="badge text-bg-secondary">laurea amk</span>
+              <span class="badge text-bg-secondary">student</span>
+            </div>
+
+            <h1 class="display-6 fw-bold mb-2">👋 Hi, I am Quyet!</h1>
+            <p class="text-muted mb-4">
+              I am a student learning web development at Laurea AMK. This is my portfolio.              
+            </p>
+
+            <!-- alert component -->
+            <div class="alert alert-light border mb-0" role="alert">
+              <strong>Note:</strong> Use the navbar to jump to sections within this page. “Resumé” links to a different HTML file.
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <!-- card component -->
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <p class="text-uppercase small text-muted mb-2">Quick info</p>
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex justify-content-between"><span>Location</span><span class="text-muted">Helsinki, Finland</span></li>
+                  <li class="d-flex justify-content-between"><span>Status</span><span class="text-muted">Student</span></li>
+                  <li class="d-flex justify-content-between"><span>Email</span><span class="text-muted">quyet.pham@student.laurea.fi</span></li>                  
+                </ul>
+
+                <!-- modal trigger button -->
+                <button class="btn btn-outline-secondary btn-sm mt-3 w-100"
+                        data-bs-toggle="modal" data-bs-target="#aboutModal">
+                  About this website
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- section 1: about (card + accordion) -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="h4 fw-bold">About</h2>
+              <p class="text-muted mb-0">
+                Hanoi native turned Helsinki resident. I studied Business with a focus on Marketing for years. <br>
+                Now I am practicing website development using HTML, CSS and Bootstrap.
+                This is my own portfolio website and it's where I showcase my skills and projects in web development thus far.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <!-- accordion component -->
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="h4 fw-bold mb-3">What I’m learning for this project</h2>
+
+              <div class="accordion" id="learningAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                      Bootstrap grid & utilities
+                    </button>
+                  </h2>
+                  <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#learningAccordion">
+                    <div class="accordion-body text-muted">
+                      Using container/rows/cols, spacing helpers (m-, p-), flex utilities.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                      Components
+                    </button>
+                  </h2>
+                  <div id="a2" class="accordion-collapse collapse" data-bs-parent="#learningAccordion">
+                    <div class="accordion-body text-muted">
+                      Cards, accordions, modals, alerts, forms, badges, and progress bars.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                      CSS
+                    </button>
+                  </h2>
+                  <div id="a3" class="accordion-collapse collapse" data-bs-parent="#learningAccordion">
+                    <div class="accordion-body text-muted">
+                      Small tweaks without breaking Bootstrap’s layout.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- section 2: skills (badges + progress) -->
+  <section id="skills" class="py-5 bg-light border-top border-bottom">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+          <h2 class="h4 fw-bold">Skills</h2>
+          <p class="text-muted">My current skills</p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge text-bg-secondary">Business Development and Marketing: Office suite</span>
+            <span class="badge text-bg-secondary">Web Development: HTML, CSS, Bootstrap 5, JavaScript</span>
+            <span class="badge text-bg-secondary">Cybersecurity: Computer Networking</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span class="fw-semibold">Office suite</span><span class="text-muted">85%</span>
+            </div>
+            <div class="progress" aria-label="HTML progress" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-secondary" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span class="fw-semibold">Development</span><span class="text-muted">55%</span>
+            </div>
+            <div class="progress" aria-label="CSS progress" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-secondary" style="width: 55%"></div>
+            </div>
+          </div>
+
+          <div class="mb-0">
+            <div class="d-flex justify-content-between">
+              <span class="fw-semibold">Computer Networking</span><span class="text-muted">70%</span>
+            </div>
+            <div class="progress" aria-label="Bootstrap progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-secondary" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- section 3: projects (cards + modal details) -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-3">
+        <div>
+          <h2 class="h4 fw-bold mb-1">Projects</h2>
+          <p class="text-muted mb-0">My hands-on websites</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h6 fw-semibold">Job Application Form, written in HTML</h3>
+              <p class="text-muted small mb-3">Forms + validation attributes + semantic tags.</p>
+              <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#p1">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h6 fw-semibold">Art Gallery, CSS practice</h3>
+              <p class="text-muted small mb-3">Positioning, float/clear, basic layout.</p>
+              <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#p2">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h6 fw-semibold">Portfolio, using Bootstrap</h3>
+              <p class="text-muted small mb-3">Grid, utilities, components.</p>
+              <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#p3">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- section 4: contact (form + button) -->
+  <section id="contact" class="py-5 bg-light border-top">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-5">
+          <h2 class="h4 fw-bold">Contact</h2>
+          <p class="text-muted">
+            Contact me anytime via this form!
+          </p>
+          <p class="text-muted small mb-0">
+            <i class="bi bi-info-circle me-1"></i>
+            Due to the year ending, I might take some time to reply.
+          </p>
+        </div>
+
+        <div class="col-12 col-md-7">
+          <form class="card card-body shadow-sm">
+            <div class="mb-3">
+              <label for="cname" class="form-label fw-semibold">Name</label>
+              <input id="cname" class="form-control" type="text" placeholder="Your name">
+            </div>
+            <div class="mb-3">
+              <label for="cemail" class="form-label fw-semibold">Email address</label>
+              <input id="cemail" class="form-control" type="email" placeholder="name@email.com">
+            </div>
+            <div class="mb-3">
+              <label for="cmsg" class="form-label fw-semibold">Message</label>
+              <textarea id="cmsg" class="form-control" rows="4" placeholder="Write your message..."></textarea>
+            </div>
+            <button class="btn btn-secondary" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 5: footer -->
+  <footer class="py-4 bg-white border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span class="text-muted small">Copyright 2025 by Quyet Pham</span>
+      <div class="d-flex gap-3">
+        <a class="text-muted small text-decoration-none" href="#about">About</a>
+        <a class="text-muted small text-decoration-none" href="#projects">Projects</a>
+        <a class="text-muted small text-decoration-none" href="resume.html">Resumé</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- modal components -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">About this portfolio</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-muted">
+          Built in late 2025 with Bootstrap 5 cdn, components, and custom CSS ❤️
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="p1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Project: Job Application Form</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-muted">
+          Practiced inputs, labels, required fields, patterns, and semantic layout.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="p2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Project: CSS Art Gallery</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-muted">
+          Practiced CSS positioning (fixed/sticky/absolute), float/clear, and file paths.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="p3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Project: Portfolio with Bootstrap</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-muted">
+          Using Bootstrap grid and multiple components for this portfolio website.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
