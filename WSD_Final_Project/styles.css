@@ -1,0 +1,36 @@
+/* Custom CSS overrides for portfolio built with Bootstrap 5 */
+:root {
+  --soft-bg: #f6f7f8;
+  --soft-border: #e6e8eb;
+}
+
+/* keep fixed navbar from covering sections */
+body {
+  padding-top: 72px;
+}
+
+/* softer section header feel */
+header.bg-light {
+  background: var(--soft-bg) !important; /* small override */
+}
+
+/* slightly reduce default card roundness */
+.card {
+  border-color: var(--soft-border);
+  border-radius: 0.75rem;
+}
+
+/* Thinner progress bars */
+.progress {
+  height: 0.7rem;
+}
+
+/* badge font weight adjustment */
+.badge.text-bg-secondary {
+  font-weight: 500;
+}
+
+/* footer link hover effect */
+footer a:hover {
+  text-decoration: underline;
+}

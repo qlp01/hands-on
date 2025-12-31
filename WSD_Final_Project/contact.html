@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quyet Pham - Contact me</title>
+
+  <link rel="icon" href="favicon.ico">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="index.html">Quyet Pham</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+              aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resumé</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="pt-4"></div>
+
+    <header class="mb-4">
+      <h1 class="h3 fw-bold mb-1">Contact me here</h1>
+      <p class="text-muted mb-0">Below you can find links to my social media and a form to contact me!</p>
+    </header>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5 fw-bold">Social media links</h2>
+            <p class="text-muted">These are links to my social media. The fastest way to contact me is by sending me a private message there!</p>
+
+            <div class="d-flex gap-3 align-items-center flex-wrap">
+              <a class="btn btn-outline-secondary btn-sm" href="https://github.com/qlp01" target="_blank" aria-label="GitHub">
+                <i class="bi bi-github me-1"></i> GitHub
+              </a>
+              <a class="btn btn-outline-secondary btn-sm" href="https://linkedin.com/in/quyet-pham" target="_blank" aria-label="LinkedIn">
+                <i class="bi bi-linkedin me-1"></i> LinkedIn
+              </a>
+              <a class="btn btn-outline-secondary btn-sm" href="https://instagram.com/quyetlepham" target="_blank" aria-label="Instagram">
+                <i class="bi bi-instagram me-1"></i> Instagram
+              </a>
+              <a class="btn btn-outline-secondary btn-sm" href="https://facebook.com/quyetlepham" target="_blank" aria-label="Facebook">
+                <i class="bi bi-facebook me-1"></i> Facebook
+              </a>
+            </div>
+
+            <hr>
+            <p class="text-muted small mb-0">
+              Note: I can only reply at certain times due to being a student. Thank you for understanding!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7">
+
+        <form class="card card-body shadow-sm" action="#" method="post" aria-label="Contact form">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Name</label>
+            <input id="name" name="name" class="form-control" type="text" placeholder="Your name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Your email address</label>
+            <input id="email" name="email" class="form-control" type="email" placeholder="name@email.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="topic" class="form-label fw-semibold">Topic</label>
+            <select id="topic" name="topic" class="form-select" aria-label="Select a topic">
+              <option value="general" selected>General</option>
+              <option value="offers">Job offers</option>
+              <option value="feedback">Feedback</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label fw-semibold">Message</label>
+            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Write your message here" required></textarea>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-secondary" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span class="text-muted small">Copyright 2025 by Quyet Pham</span>
+      <div class="d-flex gap-3">
+        <a class="text-muted small text-decoration-none" href="index.html">Home</a>
+        <a class="text-muted small text-decoration-none" href="about.html">About</a>
+        <a class="text-muted small text-decoration-none" href="resume.html">Resumé</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
